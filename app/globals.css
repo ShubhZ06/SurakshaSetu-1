@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base - Soft White/Gray Background */
+    --background: 210 20% 98%;
+    /* #F8F9FA */
+    --foreground: 222.2 84% 4.9%;
+
+    /* Cards - White with Soft Shadow */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    /* Popovers */
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    /* Primary - Pastel Blue/Purple (Reference: "Hello Len" button/toggle) */
+    --primary: 262 83% 58%;
+    /* Soft Purple */
+    --primary-foreground: 210 40% 98%;
+
+    /* Secondary - Light Peach/Pink */
+    --secondary: 350 100% 88%;
+    /* Pastel Pink */
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    /* Muted - Soft Gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    /* Accent - Pastel Mint/Green */
+    --accent: 142 71% 45%;
+    /* Green */
+    --accent-foreground: 210 40% 98%;
+
+    /* Destructive */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders */
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262 83% 58%;
+    /* Ring matches Primary */
+
+    --radius: 1rem;
+    /* More rounded corners */
+  }
+
+  /* 
+   * Custom Pastel Utility Classes 
+   * Can be used as bg-[color] via Tailwind config extension or raw CSS
+   */
+  .bg-pastel-pink {
+    background-color: #FFD6E0;
+  }
+
+  .bg-pastel-purple {
+    background-color: #E2DBFF;
+  }
+
+  .bg-pastel-blue {
+    background-color: #D6E4FF;
+  }
+
+  .bg-pastel-green {
+    background-color: #D1FAE5;
+  }
+
+  .bg-pastel-yellow {
+    background-color: #FEF3C7;
+  }
+
+  .bg-pastel-orange {
+    background-color: #FFEDD5;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  /* Soften headings */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold tracking-tight text-zinc-800;
+  }
+}
