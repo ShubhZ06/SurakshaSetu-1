@@ -11,7 +11,7 @@ import type { Course, UserProgress, DrillLog } from "@/lib/types";
 
 // Mock user data - replace with Auth0 integration later
 const MOCK_USER = {
-    id: "student-1",
+    id: "94e89daa-938c-4eab-949d-5a45cd24d260", // Real UUID from database
     name: "Alex Kumar",
     grade_level: 7,
     class_section: "A"
@@ -39,8 +39,8 @@ export default function StudentDashboard() {
                 const statsData = await database.progress.getStats(MOCK_USER.id);
                 setStats(statsData);
 
-                // Load upcoming drills (mock school ID)
-                const { data: drillsData } = await database.drills.getBySchool("school-1", 3);
+                // Load upcoming drills (using real school ID)
+                const { data: drillsData } = await database.drills.getBySchool("382fd5c5-318c-4488-a418-10cd0f9bf4ef", 3);
                 if (drillsData) setUpcomingDrills(drillsData);
 
             } catch (error) {

@@ -8,7 +8,7 @@ import type { Course, UserProgress } from "@/lib/types";
 
 // Mock user data - replace with Auth0 integration later
 const MOCK_USER = {
-    id: "student-1",
+    id: "94e89daa-938c-4eab-949d-5a45cd24d260", // Real UUID from database
     name: "Alex Kumar",
     grade_level: 7,
     class_section: "A"
