@@ -134,8 +134,8 @@ export default function StudentDashboard() {
                                 </div>
 
                                 <div className="w-full bg-white rounded-full h-2 mb-2">
-                                    <div 
-                                        className="bg-indigo-500 h-2 rounded-full transition-all duration-500" 
+                                    <div
+                                        className="bg-indigo-500 h-2 rounded-full transition-all duration-500"
                                         style={{ width: `${progress.find(p => p.status === 'in_progress')?.completion_percentage || 0}%` }}
                                     />
                                 </div>
@@ -216,14 +216,14 @@ export default function StudentDashboard() {
 
                         <div className="space-y-4">
                             {upcomingDrills.length > 0 ? upcomingDrills.map((drill, i) => {
-                                const drillColors = {
+                                const drillColors: Record<string, string> = {
                                     fire: "bg-orange-100 text-orange-700",
                                     earthquake: "bg-purple-100 text-purple-700",
                                     lockdown: "bg-red-100 text-red-700",
                                     evacuation: "bg-blue-100 text-blue-700"
                                 };
-                                
-                                const drillEmojis = {
+
+                                const drillEmojis: Record<string, string> = {
                                     fire: "🔥",
                                     earthquake: "🌍",
                                     lockdown: "🔒",
@@ -239,10 +239,10 @@ export default function StudentDashboard() {
                                             <div>
                                                 <h4 className="font-bold capitalize">{drill.drill_type} Drill</h4>
                                                 <span className="text-xs opacity-70 font-medium">
-                                                    {new Date(drill.scheduled_at).toLocaleTimeString('en-US', { 
-                                                        hour: 'numeric', 
+                                                    {new Date(drill.scheduled_at).toLocaleTimeString('en-US', {
+                                                        hour: 'numeric',
                                                         minute: '2-digit',
-                                                        hour12: true 
+                                                        hour12: true
                                                     })}
                                                 </span>
                                             </div>
